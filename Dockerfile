@@ -1,7 +1,7 @@
 FROM quay.io/hemberg-group/scrna-seq-course-base:latest
 
 # install R packages
-RUN echo 'install.packages(c("devtools", "bookdown", "knitr", "pheatmap", "statmod", "mvoutlier", "mclust", "dplyr", "penalized", "cluster", "Seurat", "KernSmooth", "mgcv", "ROCR", "googleVis", "tidyverse", "ggfortify"))' > /opt/packages.r && \
+RUN echo 'install.packages(c("devtools", "bookdown", "knitr", "pheatmap", "statmod", "mvoutlier", "mclust", "dplyr", "penalized", "cluster", "Seurat", "KernSmooth", "mgcv", "ROCR", "googleVis", "tidyverse"))' > /opt/packages.r && \
     echo 'source("https://bioconductor.org/biocLite.R")' >> /opt/packages.r && \
     echo 'biocLite()' >> /opt/packages.r && \
     echo 'biocLite(c("limma", "SingleCellExperiment", "Rhdf5lib", "beachmat", "scater", "scran", "RUVSeq", "sva", "SC3", "pcaMethods", "TSCAN", "monocle", "destiny", "DESeq2", "edgeR", "MAST", "scfind", "scmap", "MultiAssayExperiment", "SummarizedExperiment"))' >> /opt/packages.r && \
