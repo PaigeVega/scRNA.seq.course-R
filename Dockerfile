@@ -1,4 +1,4 @@
-FROM quay.io/hemberg-group/scrna-seq-course-base:latest
+FROM quay.io/hemberg-group/scrna-seq-course-r0:latest
 
 # install R packages
 RUN echo 'source("https://bioconductor.org/biocLite.R")' > /opt/packages2.r && \
